@@ -11,46 +11,21 @@
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">
-      <svg viewBox="0 0 130 30">
-        <title>Lively Chalk</title>
-        <style>
-polygon:nth-of-type(1) {
-  filter: url(#drawn2);
-}
-polygon:nth-of-type(2) {
-  filter: url(#drawn2);
-  mix-blend-mode: multiply;
-}
-polygon:nth-of-type(3) {
-  filter: url(#drawn2);
-  mix-blend-mode: multiply;
-}
-polygon:nth-of-type(4) {
-  filter: url(#drawn2);
-  mix-blend-mode: multiply;
-}
-        </style>
-        <defs>
-          <filter id="drawn">
-            <feTurbulence baseFrequency="0.00325" numOctaves="8" />
-            <feDisplacementMap in="SourceGraphic" scale="3" />
-          </filter>
-          <filter id="drawn2">
-            <feTurbulence baseFrequency="0.00335" numOctaves="12" />
-            <feDisplacementMap in="SourceGraphic" scale="6" />
-          </filter>
-          <filter id="drawn3">
-            <feTurbulence baseFrequency="0.003025" numOctaves="10" />
-            <feDisplacementMap in="SourceGraphic" scale="5" />
-          </filter>
-        </defs>
-        <polygon points="5,26 96,4 117,3.5 38,25" fill="white" />
-        <polygon points="10,25 100,5 105,5 25,25" fill="cyan" />
-        <polygon points="15,25 105,5 110,5 30,25" fill="yellow" />
-        <polygon points="20,25 110,5 115,5 35,25" fill="magenta" />
-      </svg>
-      </a></h1>
+      <h1 class="home">
+        <a href="{{ '/' | url }}">
+          <svg viewBox="0 0 300 150">
+            <title>Lively Chalk</title>
+            <g stroke-width="16" fill="none">
+              <circle cx="150" cy="150" r="140" stroke="hsl(343,100%,50%)" />
+              <circle cx="150" cy="150" r="120" stroke="hsl(43,100%,50%)" />
+              <circle cx="150" cy="150" r="100" stroke="hsl(63,100%,50%)" />
+              <circle cx="150" cy="150" r="80" stroke="hsl(143,100%,50%)" />
+              <circle cx="150" cy="150" r="60" stroke="hsl(193,100%,50%)" />
+              <circle cx="150" cy="150" r="40" stroke="hsl(293,100%,50%)" />
+            </g>
+          </svg>
+        </a>
+      </h1>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
