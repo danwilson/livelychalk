@@ -1,15 +1,14 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Lively Chalk",
+  "url": "https://livelychalk.netlify.app",
+  "description": "I started drawing with sidewalk chalk. These are the results.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "I started drawing with sidewalk chalk. These are the results.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://myurl.com/"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com"
+    "name": "Dan Wilson"
   }
 }

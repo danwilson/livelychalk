@@ -11,26 +11,49 @@
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
+      <h1 class="home"><a href="{{ '/' | url }}">
+      <svg viewBox="0 0 130 30">
+        <title>Lively Chalk</title>
+        <style>
+polygon:nth-of-type(1) {
+  filter: url(#drawn2);
+}
+polygon:nth-of-type(2) {
+  filter: url(#drawn2);
+  mix-blend-mode: multiply;
+}
+polygon:nth-of-type(3) {
+  filter: url(#drawn2);
+  mix-blend-mode: multiply;
+}
+polygon:nth-of-type(4) {
+  filter: url(#drawn2);
+  mix-blend-mode: multiply;
+}
+        </style>
+        <defs>
+          <filter id="drawn">
+            <feTurbulence baseFrequency="0.00325" numOctaves="8" />
+            <feDisplacementMap in="SourceGraphic" scale="3" />
+          </filter>
+          <filter id="drawn2">
+            <feTurbulence baseFrequency="0.00335" numOctaves="12" />
+            <feDisplacementMap in="SourceGraphic" scale="6" />
+          </filter>
+          <filter id="drawn3">
+            <feTurbulence baseFrequency="0.003025" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="5" />
+          </filter>
+        </defs>
+        <polygon points="5,26 96,4 117,3.5 38,25" fill="white" />
+        <polygon points="10,25 100,5 105,5 25,25" fill="cyan" />
+        <polygon points="15,25 105,5 110,5 30,25" fill="yellow" />
+        <polygon points="20,25 110,5 115,5 35,25" fill="magenta" />
+      </svg>
+      </a></h1>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      <div class="warning">
-        <ol>
-          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
-          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
-        </ol>
-        <p><em>This is an <a href="https://www.11ty.io/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-      </div>
-
       {{ content | safe }}
     </main>
 
