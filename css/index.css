@@ -20,6 +20,9 @@ header {
   text-align: center;
   padding-inline: 2em;
 }
+header a {
+  display: inline-block;
+}
 header svg {
   width: 100%;
   max-width: 30rem;
