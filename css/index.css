@@ -16,6 +16,9 @@ body {
 body {
   min-height: 100vh;
 }
+img {
+  max-width: 100%;
+}
 header {
   text-align: center;
   padding-inline: 2em;
@@ -31,16 +34,16 @@ header svg {
 /* Posts list */
 .postlist {
   list-style: none;
-  padding: 0;
+  padding: 0 1.5em;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--column-min, 20em), 1fr));
-  grid-gap: 10px;
-  gap: 10px;
+  grid-gap: 1.5em;
+  gap: 1.5em;
   grid-auto-rows: dense;
   place-items: stretch;
 }
-img {
-  max-width: 100%;
+.postlist img {
+  display: block;
 }
 
 
