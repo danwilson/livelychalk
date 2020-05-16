@@ -18,6 +18,7 @@ body {
 }
 header {
   text-align: center;
+  padding-inline: 2em;
 }
 header svg {
   width: 100%;
@@ -56,4 +57,14 @@ img {
 a[href].tag,
 a[href].tag:visited {
   color: #fff;
+}
+
+.tmpl-post {
+  display: flex;
+  padding-bottom: 2em;
+}
+.tmpl-post img {
+  margin: auto;
+  width: 100%;
+  max-width: 70em;
 }
