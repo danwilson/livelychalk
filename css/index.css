@@ -62,9 +62,10 @@ a[href].tag:visited {
 .tmpl-post {
   display: flex;
   padding-bottom: 2em;
+  justify-content: center;
+  align-items: center;
 }
 .tmpl-post img {
-  margin: auto;
   width: 100%;
   max-width: 70em;
 }

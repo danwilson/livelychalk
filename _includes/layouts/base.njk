@@ -6,20 +6,19 @@
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     {% if key %}
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:creator" content="@dancwilson">
       <meta name="twitter:title" content="{{key}}">
-      <meta name="twitter:image" content="https://livelychalk.netlify.app/img/{{ key }}.jpg">
+      <meta name="twitter:image" content="{{ '/img/{{ key }}.jpg' | url }}">
     {% endif %}
   </head>
   <body>
     <header>
       <h1 class="home">
         <a href="{{ '/' | url }}">
-          <svg viewBox="0 0 300 150">
+          <svg viewBox="0 0 300 150" width="300" height="150">
             <title>Lively Chalk</title>
             <g stroke-width="16" fill="none">
               <circle cx="150" cy="150" r="140" stroke="hsl(343,100%,50%)" />
