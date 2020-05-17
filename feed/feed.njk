@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | rssDate }}</updated>
 		<id>{{ absolutePostUrl }}</id>
-		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+		<content type="html"><img src="{{ '/img/' | url | absoluteUrl(metadata.url) }}{{ post.data.key }}.jpg" /></content>
 	</entry>
 	{%- endfor %}
 </feed>
