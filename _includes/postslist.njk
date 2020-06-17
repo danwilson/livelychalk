@@ -1,7 +1,18 @@
 <ul reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
   <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %} {% if post.data.classes %} {{post.data.classes}}{% endif %}">
-    <a href="{{post.url}}"><img src="/img/{{post.data.key}}.jpg?nf_resize=fit&w=600&h=600" alt="{{post.data.content}}" loading="lazy" /></a>
+    <a href="{{post.url}}">
+      <img 
+        srcset="/img/{{post.data.key}}.jpg?nf_resize=fit&w=440&h=440,
+          /img/{{post.data.key}}.jpg?nf_resize=fit&w=600&h=600 1.5x,
+          /img/{{post.data.key}}.jpg?nf_resize=fit&w=800&h=800 2x"
+        src="/img/{{post.data.key}}.jpg?nf_resize=fit&w=440&h=440"
+        alt="{{post.data.content}}"
+        loading="lazy"
+        width="320"
+        height="320"
+      />
+    </a>
     {% for tag in post.data.tags %}
       {%- if collections.tagList.indexOf(tag) != -1 -%}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
