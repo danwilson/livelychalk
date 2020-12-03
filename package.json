@@ -30,5 +30,6 @@
     "luxon": "^1.21.3",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5"
-  }
+  },
+  "engines" : { "node" : "^14.5.1" }
 }
