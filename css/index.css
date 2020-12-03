@@ -1,6 +1,7 @@
 :root {
   --dark: #16161c;
   --back: var(--dark);
+  --column-min: 16em;
 }
 * {
   box-sizing: border-box;
