@@ -5,4 +5,3 @@ tags: ['bill-murray', 'carol-kane', 'christmas-carol', 'scrooged', 'winter']
 layout: layouts/post.njk
 key: scrooged
 ---
-
