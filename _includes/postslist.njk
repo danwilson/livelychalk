@@ -13,12 +13,14 @@
         height="320"
       />
     </a>
+    <ul class="tag-list">
     {% for tag in post.data.tags %}
       {%- if collections.tagList.indexOf(tag) != -1 -%}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <!--a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a-->
+      <li><a href="{{ tagUrl | url }}" class="tag">{{tag | replace("-", " ")}}</a></li>
       {%- endif -%}
     {% endfor %}
+    </ul>
   </li>
 {% endfor %}
 </ul>
